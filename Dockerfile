@@ -1,5 +1,7 @@
 FROM ubuntu:16.04
-RUN apt-get update && apt-get install -y python python-pip --upgrade pip
+#RUN apt-get update && apt-get install -y python python-pip
+RUN apt-get update
+RUN python -m pip install --upgrade pip
 #RUN python -m pip install --upgrade pip
 RUN pip install flask
 COPY app.py /opt/
