@@ -3,6 +3,8 @@ FROM ubuntu:16.04
 #RUN apt-get update && apt-get install -y python python3-pip
 RUN apt-get update
 RUN apt-get install -y python python3-pip
+RUN python3 --version
+RUN pip3 --version
 #RUN pip install --upgrade pip
 RUN pip install flask
 COPY app.py /opt/
